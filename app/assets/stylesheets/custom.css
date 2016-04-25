@@ -1,0 +1,102 @@
+@font-face{
+	font-family: "Hursheys";
+	src: url(/assets/fonts/Hursheys.ttf);
+}
+
+@font-face{
+	font-family: "webly";
+	src: url(/assets/fonts/webly.ttf);
+}
+
+@font-face{
+	font-family: "ClearSans";
+	src: url(/assets/fonts/ClearSans.ttf);
+}
+
+@font-face{
+	font-family: "CaviarDreams";
+	src: url(/assets/fonts/CaviarDreams.ttf);
+}
+
+a{
+	font-family: "webly";
+}
+
+body{
+	font-family: "ClearSans";
+	background-image: url(/assets/fondo.png); 
+	background-color: #D4D4D4;
+}
+
+p{
+	font-family: "webly";
+}
+
+.jumbotron{
+	text-align: center;
+	background-color: #2E2D88;
+	font-family: times;
+	color:white;
+	margin-top: 3em;
+}
+.container h1{
+	 display:inline;
+	 font-family: "ClearSans", serif;
+}
+.btn{
+	font-size: 2.1em;
+	background: #5cb85c;
+	border-color: #4cae4c;
+}
+.btn:hover{
+	font-size: 2.1em;
+	background: #4cae4c;
+	border-color: #4Fae4c;
+}
+.potd{
+	text-align: center;
+}
+.firstpromotions{
+	text-align: center;
+}
+.well{
+	text-align: center;
+	font:Arial;
+	font-size: 2em;
+}
+.panel-footer{
+	text-align: center;
+}
+.form-signin{
+  max-width: 330px;
+  margin: 0 auto;
+  padding-bottom: 15;
+}
+
+#nosotros h2{
+	text-align: center;
+	font-size: 40px;
+	margin: 4% auto; 
+	color: #2E2D88;
+}
+#nosotros p{
+	text-align: center;
+	font-size: 25px;
+}
+#aboutinfo .page-header h2{
+	color:#2E2D88;
+}
+#aboutinfo p{
+	font-size: 2.2em;
+	font-family: "webly", serif;
+	
+}
+#name-input{
+	padding-right: 45px;
+}
+#name-account{
+	padding-right: 29px;
+}
+#name-email{
+	padding-right: 65px;
+}

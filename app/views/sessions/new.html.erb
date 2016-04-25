@@ -1,0 +1,11 @@
+<% provide(:title, "Ingresar")%>
+	<h2 class="form-signin-heading">Ingrese sus datos</h2>
+	<%= form_for(:session, url: sessions_path) do |f| %>
+		<%= f.label :email, class: "sr-only"%>
+		<%= f.text_field :email%>
+
+		<%= f.label :password, class: "sr-only" %>
+		<%= f.password_field :password %>
+
+		<%= f.submit "Ingresar",class: "btn btn-lg btn-success btn-block" %>
+	<%end%>

@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="jumbotron">
+		<img src="/assets/logo.png">
+		<p>!Encuentra las mejores promociones y cupones de lo que buscas en tu ciudad!</p>
+		<%=link_to "Home",root_path, class:"btn btn-danger" %>
+		<%=link_to "About",about_path, class:"btn btn-danger" %>
+		<% if signed_in? %>
+			<%=link_to "Mi cuenta", micuenta_path , class: "btn btn-danger"%>
+			<%=link_to "Salir", signout_path , class: "btn btn-danger"%>
+		<%else%>
+		<%=link_to "Registrarse",registrarse_path, class:"btn btn-danger" %>
+		<%=link_to "Ingresar",ingresar_path, class:"btn btn-danger" %>
+		<%=link_to "Cupones",root_path, class:"btn btn-danger" %>
+		<%end%>
+		<!--<a class="btn btn-danger" href="promociones.html" role="button">Promociones</a> -->
+	</div>
+</div>
