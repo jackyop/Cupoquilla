@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	attr_accessible :name,  :email, :password, :passsword_confirmation
 	has_secure_password
+	has_many :coupons, dependent: :destroy
 	before_save{ |user| user.email=email.downcase }
 	before_save :create_remember_token
 	validates :password,:length => { :minimum => 5 }

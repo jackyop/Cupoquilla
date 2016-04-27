@@ -1,0 +1,8 @@
+<% provide(:title, 'Cupones') %>
+<div class="cupones">
+<% @cupones.each do |coupon| %>
+	<ol>El cupon: 
+	<%=coupon.content %> Tiene el precio: <%=coupon.price %>
+	</ol>
+<%end%>
+</div>

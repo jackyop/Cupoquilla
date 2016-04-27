@@ -43,15 +43,27 @@ p{
 	 display:inline;
 	 font-family: "ClearSans", serif;
 }
-.btn{
+.btn-success{
 	font-size: 2.1em;
 	background: #5cb85c;
 	border-color: #4cae4c;
 }
-.btn:hover{
+.cupones{
+	font-size: 2.1em;
+	font-family: "webly", serif;
+}
+.newCoupon h3{
+	font-size: 2.1em;
+	font-family: "webly", serif;
+}
+.btn-success:hover{
 	font-size: 2.1em;
 	background: #4cae4c;
 	border-color: #4Fae4c;
+}
+.btn-warning:hover{
+	font-size: 1.1em;
+	background: red;
 }
 .potd{
 	text-align: center;

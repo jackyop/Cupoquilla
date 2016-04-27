@@ -1,4 +1,5 @@
-<% provide(:title, "Editar tu usuario") %><%= form_for(@user) do |f| %>
+<% provide(:title, "Editar tu usuario") %>
+<%= form_for(@user) do |f| %>
 	<%= render 'layouts/errors' %>
 	<div class="input-group input-group-lg">
 		<%=f.label :name, 'Nombre o nickname', class: "input-group-addon" %>
@@ -16,5 +17,10 @@
 		<%=f.label :password_confirmation,"Confirma tu contraseña",class: "input-group-addon"%>
 		<%=f.password_field :password_confirmation, class: "form-control" %>
 	</div>
-	<%= f.submit "Registrarse", class: "btn btn-info btn-block" %>
+	<div class="input-group input-group-lg">
+	<%=f.label :client,"Quiere convertirse en cliente?",class: "input-group-addon"%>
+	<%=f.check_box :client%>
+	</div>
+	<%= f.submit "Actualizar datos", class: "btn btn-success btn-block" %>
 <% end %>
+

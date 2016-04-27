@@ -1,0 +1,22 @@
+<% provide(:title, 'Mis cupones') %>
+<div class="cupones">
+<% @coupons.each do |coupon| %>
+		<% if !(coupon==@coupons.last) %>
+		<li>
+			Descripcion: 
+			<%=coupon.content %>
+			       /Precio: 
+			<%=coupon.price %>
+			 <%= link_to "Borrar", coupon, method: :delete, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+		</li>
+		<%end%>
+<%end%>
+</div>
+<div class="newCoupon">
+<h3>Crear nuevo cupon</h3>
+<%= form_for(@coupon) do |f| %>
+ <%=f.text_field :content, class: "form-control", placeholder: "Caracteristicas del cupon" %>
+ <%=f.text_field :price, class: "form-control", placeholder: "Precio del cupon" %>
+  <%= f.submit "Crear cupon", class: "btn btn-success btn-block" %>
+<% end %>
+</div>
