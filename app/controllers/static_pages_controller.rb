@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+	before_filter :signed_in_admin, only: :admin
 	def home
 	end
 	def about
@@ -10,6 +11,16 @@ class StaticPagesController < ApplicationController
 	end
 	def cupones
 		@cupones=Coupon.all
+	end
+	def compras
+		@compras = Compra.all
+	end
+	def admin
+		signed_in_user
+		signed_in_admin
+		@cupones=Coupon.all
+		@users= User.all
+		@compras=Compra.all
 	end
 	
 end

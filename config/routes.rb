@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :coupons, only: [:create, :destroy]
+  resources :compras, only: [:create, :destroy]
   root to: 'static_pages#home'
    get '/about', to: 'static_pages#about'
    get '/registrarse', to: 'users#new'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
    get '/micuenta', to: 'users#micuenta'
    get '/miscupones', to: 'static_pages#customCoupons'
    get '/cupones', to: 'static_pages#cupones'
+   get '/admin', to: 'static_pages#admin'
+   get '/miscompras', to: 'static_pages#compras'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -3,6 +3,9 @@
 <% @cupones.each do |coupon| %>
 	<ol>El cupon: 
 	<%=coupon.content %> Tiene el precio: <%=coupon.price %>
+	<% if signed_in? %>
+		<%= link_to "Comprar", {:controller => "compras", :action => "create", :user_id => current_user.id, :coupon_id=> coupon.id,:contenido =>coupon.content}, method: :create, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+	<%end%>
 	</ol>
 <%end%>
 </div>

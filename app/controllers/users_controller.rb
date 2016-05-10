@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		if @user.save
 			sign_in @user
-			flash[:success] = "Welcome to the Sample app"
+			flash[:success] = "Bienvenido a Cupoquilla"
 			redirect_to root_path
 		else
 			render 'new'
@@ -30,10 +30,11 @@ class UsersController < ApplicationController
 	def destroy
 		User.find(params[:id]).destroy
 		flash[:success] = "User destroyed"
-		redirect_to users_path
+		redirect_to root_path
 	end
 	def micuenta
 		current_user
+		@user=current_user
 	end
 	private
 	def correct_user

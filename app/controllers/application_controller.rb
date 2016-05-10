@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
 		store_location
 		redirect_to signin_path, notice: "Please Sign in" unless signed_in?
 	end
+  def signed_in_admin
+		store_location
+		redirect_to root_path, notice: "You are not admin" unless admin?
+  end
 end

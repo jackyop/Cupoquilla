@@ -1,0 +1,44 @@
+<% provide(:title, 'Admin') %>
+<div class="cupones">
+<h2>Cupones:</h2>
+<% @cupones.each do |coupon| %>
+		<li>
+			ID: <%=coupon.id%>/
+			Descripcion: 
+			<%=coupon.content %>
+			       /Precio: 
+			<%=coupon.price %>
+			 <%= link_to "Borrar", coupon, method: :delete, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+		</li>
+<%end%>
+</div>
+<div class="usuarios">
+<h2>Usuarios:</h2>
+<% @users.each do |user| %>
+		<li>
+			ID: <%=user.id%>/
+			Nombre: 
+			<%=user.name %>
+			     / Email:
+			<%=user.email %>
+			<% if !(user.id==2) %>
+			 <%= link_to "Borrar", user, method: :delete, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+			 <%end%>
+		</li>
+<%end%>
+<div class="compras">
+<h2>Compras:</h2>
+<% @compras.each do |compra| %>
+		<li>
+			ID: <%=compra.id%>
+			/Descripcion:
+			<%=compra.contenido %>
+			     / ID-User:
+			<%=compra.user_id %>
+			/ ID-Cupon:
+			<%=compra.coupon_id %>
+			 <%= link_to "Borrar", compra, method: :delete, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+		</li>
+<%end%>
+</div>
+

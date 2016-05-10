@@ -1,2 +1,4 @@
 <% provide(:title, 'Mi cuenta') %>
 <%=link_to "Editar mis datos", edit_user_path(current_user), class: "btn btn-success btn-block"%>
+<%=link_to "Ver mis compras", miscompras_path, class: "btn btn-success btn-block"%>
+<%= link_to "delete", @user, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-success btn-block"%>
