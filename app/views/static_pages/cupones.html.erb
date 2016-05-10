@@ -6,6 +6,7 @@
 	<% if signed_in? %>
 		<%= link_to "Comprar", {:controller => "compras", :action => "create", :user_id => current_user.id, :coupon_id=> coupon.id,:contenido =>coupon.content}, method: :create, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
 	<%end%>
+	<%= image_tag coupon.picture.url if coupon.picture? %>
 	</ol>
 <%end%>
 </div>

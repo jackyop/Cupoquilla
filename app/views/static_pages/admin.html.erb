@@ -9,6 +9,7 @@
 			       /Precio: 
 			<%=coupon.price %>
 			 <%= link_to "Borrar", coupon, method: :delete, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
+			 <%= image_tag coupon.picture.url if coupon.picture? %>
 		</li>
 <%end%>
 </div>
