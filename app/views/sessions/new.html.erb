@@ -1,14 +1,16 @@
 <% provide(:title, "Ingresar")%>
-	<h2 class="form-signin-heading">Ingrese sus datos</h2>
-	<%= form_for(:session, url: sessions_path) do |f| %>
-		
-<div class="input-group input-group-lg">
-		<%= f.label :email,"Digite su email",class: "input-group-addon"%>
-		<%= f.text_field :email,class: "form-control"%>
+<div class="container">
+    <h2 class="form-signin-heading">Ingrese sus datos</h2>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      
+  <div class="input-group input-group-lg">
+      <%= f.label :email,"Digite su email",class: "input-group-addon", id:"addon4"%>
+      <%= f.text_field :email,class: "form-control"%>
+  </div>
+  <div class="input-group input-group-lg">
+      <%= f.label :password,"Digite su contraseña",class: "input-group-addon" %>
+      <%= f.password_field :password, class: "form-control" %>
+  </div>
+      <%= f.submit "Ingresar",class: "btn btn-lg btn-success button" %>
+    <%end%>
 </div>
-<div class="input-group input-group-lg">
-		<%= f.label :password,"Digite su contraseña",class: "input-group-addon" %>
-		<%= f.password_field :password, class: "form-control" %>
-</div>
-		<%= f.submit "Ingresar",class: "btn btn-lg btn-success btn-block" %>
-	<%end%>

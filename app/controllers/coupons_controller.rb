@@ -24,6 +24,6 @@ class CouponsController < ApplicationController
 end
 private
   def coupon_params
-      params.require(:coupon).permit(:content,:price, :picture)
+      params.require(:coupon).permit(:content,:price, :picture,:name)
   end
 end

@@ -1,12 +1,14 @@
 <% provide(:title, 'Cupones') %>
-<div class="cupones">
-<% @cupones.each do |coupon| %>
-	<ol>El cupon: 
-	<%=coupon.content %> Tiene el precio: <%=coupon.price %>
-	<% if signed_in? %>
-		<%= link_to "Comprar", {:controller => "compras", :action => "create", :user_id => current_user.id, :coupon_id=> coupon.id,:contenido =>coupon.content}, method: :create, data:{ confirm: "Estas seguro?"}, class: "btn btn-sm btn-warning" %>
-	<%end%>
-	<%= image_tag coupon.picture.url if coupon.picture? %>
-	</ol>
-<%end%>
+<div class="container">
+  <div class="cupones">
+  <% @cupones.each do |coupon| %>
+    <ul> Cupon: 
+    <%=coupon.name %>  - Descripcion: <%=coupon.content %> -  Precio: <%=coupon.price %> COP
+    <% if signed_in? and current_user.id!=coupon.user_id and current_user.id!=2%>
+      <%= link_to "Comprar", {:controller => "compras", :action => "create", :user_id => current_user.id, :coupon_id=> coupon.id,:contenido =>coupon.content}, method: :create, data:{ confirm: "Estas seguro que deseas comprar este cupon?"}, class: "btn btn-sm btn-warning" %>
+    <%end%>
+    <%= image_tag coupon.picture.url if coupon.picture? %>
+    </ul>
+  <%end%>
+  </div>
 </div>

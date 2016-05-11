@@ -1,11 +1,13 @@
 <% provide(:title, 'Mis compras') %>
-<div class="compras">
-<% @compras.each do |compra| %>
-		<% if (compra.user_id==current_user.id) %>
-		<li>
-			Descripcion: 
-			<%=compra.contenido %>
-		</li>
-		<%end%>
-<%end%>
+<div class="container">
+    <div class="compras">
+    <% @compras.each do |compra| %>
+      <% if (compra.user_id==current_user.id) %>
+      <li>
+        Descripcion: 
+        <%=compra.contenido %>
+      </li>
+      <%end%>
+  <%end%>
+  </div>
 </div>

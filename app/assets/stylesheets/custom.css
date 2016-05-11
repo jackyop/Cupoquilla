@@ -1,25 +1,25 @@
 @font-face{
 	font-family: "Hursheys";
-	src: url(/assets/fonts/Hursheys.ttf);
+	src: url(/assets/Hursheys.ttf);
 }
 
 @font-face{
-	font-family: "webly";
-	src: url(/assets/fonts/webly.ttf);
+	font-family: webly;
+	src: url(/assets/webly.ttf);
 }
 
 @font-face{
 	font-family: "ClearSans";
-	src: url(/assets/fonts/ClearSans.ttf);
+	src: url(/assets/ClearSans.ttf);
 }
 
 @font-face{
 	font-family: "CaviarDreams";
-	src: url(/assets/fonts/CaviarDreams.ttf);
+	src: url(/assets/CaviarDreams.ttf);
 }
 
 a{
-	font-family: "webly";
+	font-family: webly;
 }
 
 body{
@@ -39,17 +39,35 @@ p{
 	color:white;
 	margin-top: 3em;
 }
+
 .container h1{
 	 display:inline;
 	 font-family: "ClearSans", serif;
 }
+
+.img_home{
+	display: block;
+		margin: 100px 0px;
+	  height: 200px; 
+    width: 350px; 
+    max-width: 350px; 
+    max-height: 200px;
+
+}
+
+.button{
+	width: 300px;
+	margin: 10px auto;
+	display: block;
+}
+
 .btn-success{
 	font-size: 2.1em;
 	background: #5cb85c;
 	border-color: #4cae4c;
 }
 .compras{
-	font-size: 1.1em;
+	font-size: 1.7em;
 	font-family: "webly", serif;
 }
 .cupones{
@@ -69,8 +87,10 @@ p{
 	background: #4cae4c;
 	border-color: #4Fae4c;
 }
+.btn-warning{
+	font-size: 0.8462em;
+}
 .btn-warning:hover{
-	font-size: 1.1em;
 	background: red;
 }
 .potd{
@@ -92,7 +112,21 @@ p{
   margin: 0 auto;
   padding-bottom: 15;
 }
+.july{
+	width: 100px;
+}
 
+.picture{
+	text-align: center;
+	margin: 20px auto;
+}
+
+.home{
+	text-align: center;
+}
+.cupons_home{
+	margin-bottom: 50px;
+}
 #nosotros h2{
 	text-align: center;
 	font-size: 40px;
@@ -103,6 +137,13 @@ p{
 	text-align: center;
 	font-size: 25px;
 }
+#nosotros2 p{
+	text-align: center;
+	font-size: 25px;
+}
+#nosotros2{
+	margin-top:100px;
+}
 #aboutinfo .page-header h2{
 	color:#2E2D88;
 }
@@ -111,12 +152,29 @@ p{
 	font-family: "webly", serif;
 	
 }
-#name-input{
-	padding-right: 45px;
+#addon1{
+	padding-left: 45px;
 }
-#name-account{
-	padding-right: 29px;
+#addon2{
+	padding-left: 163px;
 }
-#name-email{
-	padding-right: 65px;
+#addon3{
+	padding-left: 113px;
+}
+#addon4{
+	padding-left: 63px;
+}
+
+#coupon_picture{
+	text-align: center !important;
+	margin: 0px auto;
+}
+
+.cupones img{
+		display: block;
+		margin: 20px 0px;
+	  height: 200px; 
+    width: 350px; 
+    max-width: 350px; 
+    max-height: 200px;
 }

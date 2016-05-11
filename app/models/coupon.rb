@@ -4,6 +4,7 @@ class Coupon < ActiveRecord::Base
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validates :price, presence: true
+  validates :name, presence: true
   validates_numericality_of :price
   has_many :compras, dependent: :destroy
   validate  :picture_size

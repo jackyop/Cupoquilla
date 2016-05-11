@@ -1,23 +1,23 @@
 <div class="container">
-	<div class="jumbotron">
-		<img src="<%= asset_path("logo.png") %>">
-		<p>!Encuentra las mejores promociones y cupones de lo que buscas en tu ciudad!</p>
-		<%=link_to "Home",root_path, class:"btn btn-success" %>
-		<%=link_to "About",about_path, class:"btn btn-success" %>
-		<% if signed_in? %>
-			<%=link_to "Mi cuenta", micuenta_path , class: "btn btn-success"%>
-			<%=link_to "Salir", signout_path , class: "btn btn-success"%>
-			<!--poner si es cliente -->
-			<%=link_to "Mis cupones",miscupones_path, class:"btn btn-success" %>
-			<% if admin? %>
-			<%=link_to "Administrar",admin_path, class:"btn btn-success" %>
+	<div class="container">
+		<div class="jumbotron">
+			<img src="<%= asset_path("logo.png") %>">
+			<p> Encuentra las mejores promociones y cupones de lo que buscas en tu ciudad</p>
+			<%=link_to "Home",root_path, class:"btn btn-success" %>
+			<%=link_to "About",about_path, class:"btn btn-success" %>
+			<% if signed_in? %>
+				<%=link_to "Mi cuenta", micuenta_path , class: "btn btn-success"%>
+				<%=link_to "Salir", signout_path , class: "btn btn-success"%>
+				<% if admin? %>
+				<%=link_to "Administrar",admin_path, class:"btn btn-success" %>
+				<%else%>
+					<%=link_to "Mis cupones",miscupones_path, class:"btn btn-success" %>
+				<%end%>
+			<%else%>
+			<%=link_to "Registrarse",registrarse_path, class:"btn btn-success" %>
+			<%=link_to "Ingresar",ingresar_path, class:"btn btn-success" %>
 			<%end%>
-		<%else%>
-		<%=link_to "Registrarse",registrarse_path, class:"btn btn-success" %>
-		<%=link_to "Ingresar",ingresar_path, class:"btn btn-success" %>
-		<%end%>
-		<%=link_to "Cupones",cupones_path, class:"btn btn-success" %>
-
-		<!--<a class="btn btn-success" href="promociones.html" role="button">Promociones</a> -->
+			<%=link_to "Cupones",cupones_path, class:"btn btn-success" %>
+		</div>
 	</div>
 </div>
