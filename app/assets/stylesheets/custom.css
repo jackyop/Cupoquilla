@@ -4,7 +4,7 @@
 }
 
 @font-face{
-	font-family: webly;
+	font-family: "webly";
 	src: url(/assets/webly.ttf);
 }
 
@@ -24,7 +24,7 @@ a{
 
 body{
 	font-family: "ClearSans";
-	background-image: url(/assets/fondo.png); 
+	background-image: url("fondo.png"); 
 	background-color: #D4D4D4;
 }
 
