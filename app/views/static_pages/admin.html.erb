@@ -1,5 +1,6 @@
 <% provide(:title, 'Admin') %>
-<div class="container"><div class="cupones">
+<div class="container">
+<div class="cupones">
 	<h2>Cupones:</h2>
 	<% @cupones.each do |coupon| %>
 			<li>
@@ -29,6 +30,7 @@
 				 <%end%>
 			</li>
 	<%end%>
+	</div>
 	<div class="compras">
 	<h2>Compras:</h2>
 	<% @compras.each do |compra| %>
