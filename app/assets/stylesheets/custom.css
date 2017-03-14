@@ -24,7 +24,6 @@ a{
 
 body{
 	font-family: "ClearSans";
-	background-image: url("fondo.png"); 
 	background-color: #D4D4D4;
 }
 
@@ -38,6 +37,13 @@ p{
 	font-family: times;
 	color:white;
 	margin-top: 3em;
+}
+.jumbotron2{
+	text-align: center;
+	background-color: #2E2D88;
+	font-family: times;
+	color:white;
+	padding:2em !important;
 }
 
 .container h1{
